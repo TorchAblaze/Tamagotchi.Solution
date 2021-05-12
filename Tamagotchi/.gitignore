@@ -1,7 +1,0 @@
-obj/
-bin/
-.vscode/
-node_mudules
-.DS_Store
-coverage/
-.env

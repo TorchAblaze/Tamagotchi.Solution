@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tamagotchi Creator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="~/css/styles.css" type="text/css">
+</head>
+
+<body>
+  <h1>Tamagotchi Creator</h1>
+  <h3>Give your new Tamagotchi a name and your Tamagotchi will be created!</h3>
+  <form action="/tamagotchis" method="post">
+    <label for="tamagotchi-name">Enter a name for your new Tamagotch</label>
+    <input id="tamagotchi-name" name="tamagotchi-name" type="text">
+    <button type="submit">Create New Tamagotchi!</button>
+  </form>
+</body>
+
+</html>
