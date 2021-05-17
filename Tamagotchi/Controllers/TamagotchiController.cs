@@ -1,10 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Tamagotchi.Models;
 
 namespace Tamagotchi.Controllers
@@ -26,7 +22,8 @@ namespace Tamagotchi.Controllers
     public ActionResult Create(string name)
     {
       IndividualTamagotchi newPet = new IndividualTamagotchi(name);
-      return View(RedirectToAction("Index"));
+      newPet.Save();
+      return RedirectToAction("Index");
     }
     [HttpPost("/tamagotchis/delete")]
     public ActionResult DeleteAll()

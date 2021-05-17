@@ -1,0 +1,36 @@
+@using Tamagotchi.Models;
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tamagotchi Creator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="~/css/styles.css" type="text/css">
+</head>
+
+<body>
+  <h1>Tamagotchis</h1>
+  <div class="container">
+    <ol>
+      @foreach (IndividualTamagotchi pet in Model)
+      {
+        <li class="pet-name"><a href="/tamagotchis/@pet.Id">@pet.Name</a></li>
+        <ul>
+          <li>@pet.FoodLevel</li>
+          <li>@pet.Attention</li>
+          <li>@pet.Rest</li>
+        </ul>
+      }
+    </ol>
+    <form action="/tamagotchis/delete" method="post">
+      <button class="btn btn-danger mt-6" type="submit" name="button">Delete Tamagotchis</button>
+    </form>
+    <br>
+    <a href="/"><button class="btn btn-primary mt-6">Home</button></a>
+
+  </div>
+</body>
+
+</html>
